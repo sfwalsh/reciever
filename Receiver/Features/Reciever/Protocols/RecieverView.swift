@@ -10,5 +10,5 @@ import Foundation
 
 protocol RecieverView: class {
     func logConnection(toBeaconWithId beaconId: Int)
-    func logError(error: Error)
+    func logError(error: BeaconConnectionError)
 }

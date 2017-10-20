@@ -15,10 +15,10 @@ class MockRecieverView: NSObject, RecieverView {
     var mostRecentErrorDescription: String?
     
     func logConnection(toBeaconWithId beaconId: Int) {
-        self,mostRecentlyConnectBeaconId = beaconId
+        self.mostRecentlyConnectBeaconId = beaconId
     }
     
-    func logError(error: Error) {
+    func logError(error: BeaconConnectionError) {
         self.mostRecentErrorDescription = error.localizedDescription
     }
 }

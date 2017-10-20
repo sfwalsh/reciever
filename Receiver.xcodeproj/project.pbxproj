@@ -17,14 +17,18 @@
 		C6071E861F99FC6000E9013B /* RecieverViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E851F99FC6000E9013B /* RecieverViewInteractor.swift */; };
 		C6071E881F99FCA100E9013B /* RecieverViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E871F99FCA100E9013B /* RecieverViewPresenter.swift */; };
 		C6071E8A1F99FCEB00E9013B /* RecieverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E891F99FCEB00E9013B /* RecieverView.swift */; };
-		C6071E8C1F99FDA500E9013B /* BeaconInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E8B1F99FDA500E9013B /* BeaconInteractor.swift */; };
 		C6071E901F9A065C00E9013B /* RecieverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E891F99FCEB00E9013B /* RecieverView.swift */; };
 		C6071E911F9A067C00E9013B /* RecieverViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E871F99FCA100E9013B /* RecieverViewPresenter.swift */; };
-		C6071E941F9A069700E9013B /* BeaconInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E8B1F99FDA500E9013B /* BeaconInteractor.swift */; };
 		C6071E991F9A075400E9013B /* RecieverInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E981F9A075400E9013B /* RecieverInteractor.swift */; };
 		C6071E9A1F9A07E200E9013B /* RecieverInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E981F9A075400E9013B /* RecieverInteractor.swift */; };
 		C6071E9C1F9A084C00E9013B /* MockRecieverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E9B1F9A084C00E9013B /* MockRecieverView.swift */; };
 		C6071EA01F9A086C00E9013B /* MockRecieverInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E9F1F9A086C00E9013B /* MockRecieverInteractor.swift */; };
+		C6071EA51F9A0A7800E9013B /* BeaconInteractorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071EA41F9A0A7800E9013B /* BeaconInteractorable.swift */; };
+		C6071EA61F9A0A8B00E9013B /* BeaconInteractorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071EA41F9A0A7800E9013B /* BeaconInteractorable.swift */; };
+		C6071EA81F9A0B1800E9013B /* RecieverBeaconInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071EA71F9A0B0200E9013B /* RecieverBeaconInteractor.swift */; };
+		C6071EAA1F9A0B9000E9013B /* MockBeaconInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071EA91F9A0B9000E9013B /* MockBeaconInteractor.swift */; };
+		C6071EAC1F9A0DB300E9013B /* BeaconConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071EAB1F9A0DB300E9013B /* BeaconConnectionError.swift */; };
+		C6071EAD1F9A0DB700E9013B /* BeaconConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071EAB1F9A0DB300E9013B /* BeaconConnectionError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,10 +56,13 @@
 		C6071E851F99FC6000E9013B /* RecieverViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieverViewInteractor.swift; sourceTree = "<group>"; };
 		C6071E871F99FCA100E9013B /* RecieverViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieverViewPresenter.swift; sourceTree = "<group>"; };
 		C6071E891F99FCEB00E9013B /* RecieverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieverView.swift; sourceTree = "<group>"; };
-		C6071E8B1F99FDA500E9013B /* BeaconInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconInteractor.swift; sourceTree = "<group>"; };
 		C6071E981F9A075400E9013B /* RecieverInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieverInteractor.swift; sourceTree = "<group>"; };
 		C6071E9B1F9A084C00E9013B /* MockRecieverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRecieverView.swift; sourceTree = "<group>"; };
 		C6071E9F1F9A086C00E9013B /* MockRecieverInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRecieverInteractor.swift; sourceTree = "<group>"; };
+		C6071EA41F9A0A7800E9013B /* BeaconInteractorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconInteractorable.swift; sourceTree = "<group>"; };
+		C6071EA71F9A0B0200E9013B /* RecieverBeaconInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecieverBeaconInteractor.swift; path = Receiver/RecieverBeaconInteractor.swift; sourceTree = SOURCE_ROOT; };
+		C6071EA91F9A0B9000E9013B /* MockBeaconInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBeaconInteractor.swift; sourceTree = "<group>"; };
+		C6071EAB1F9A0DB300E9013B /* BeaconConnectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconConnectionError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +107,8 @@
 				C6071E631F99F9F800E9013B /* AppDelegate.swift */,
 				C6071E651F99F9F800E9013B /* ViewController.swift */,
 				C6071E971F9A073B00E9013B /* Features */,
-				C6071E8B1F99FDA500E9013B /* BeaconInteractor.swift */,
+				C6071EA41F9A0A7800E9013B /* BeaconInteractorable.swift */,
+				C6071EAB1F9A0DB300E9013B /* BeaconConnectionError.swift */,
 				C6071E831F99FBF100E9013B /* APIRouter.swift */,
 				C6071E671F99F9F800E9013B /* Main.storyboard */,
 				C6071E6A1F99F9F800E9013B /* Assets.xcassets */,
@@ -134,6 +142,7 @@
 				C6071E951F9A071C00E9013B /* Protocols */,
 				C6071E871F99FCA100E9013B /* RecieverViewPresenter.swift */,
 				C6071E851F99FC6000E9013B /* RecieverViewInteractor.swift */,
+				C6071EA71F9A0B0200E9013B /* RecieverBeaconInteractor.swift */,
 			);
 			path = Reciever;
 			sourceTree = "<group>";
@@ -168,6 +177,7 @@
 			children = (
 				C6071E9B1F9A084C00E9013B /* MockRecieverView.swift */,
 				C6071E9F1F9A086C00E9013B /* MockRecieverInteractor.swift */,
+				C6071EA91F9A0B9000E9013B /* MockBeaconInteractor.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -275,13 +285,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6071EAC1F9A0DB300E9013B /* BeaconConnectionError.swift in Sources */,
 				C6071E661F99F9F800E9013B /* ViewController.swift in Sources */,
 				C6071E881F99FCA100E9013B /* RecieverViewPresenter.swift in Sources */,
 				C6071E841F99FBF100E9013B /* APIRouter.swift in Sources */,
-				C6071E8C1F99FDA500E9013B /* BeaconInteractor.swift in Sources */,
 				C6071E991F9A075400E9013B /* RecieverInteractor.swift in Sources */,
+				C6071EA81F9A0B1800E9013B /* RecieverBeaconInteractor.swift in Sources */,
 				C6071E8A1F99FCEB00E9013B /* RecieverView.swift in Sources */,
 				C6071E861F99FC6000E9013B /* RecieverViewInteractor.swift in Sources */,
+				C6071EA51F9A0A7800E9013B /* BeaconInteractorable.swift in Sources */,
 				C6071E641F99F9F800E9013B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,9 +304,11 @@
 			files = (
 				C6071E901F9A065C00E9013B /* RecieverView.swift in Sources */,
 				C6071E9C1F9A084C00E9013B /* MockRecieverView.swift in Sources */,
+				C6071EAA1F9A0B9000E9013B /* MockBeaconInteractor.swift in Sources */,
 				C6071E9A1F9A07E200E9013B /* RecieverInteractor.swift in Sources */,
+				C6071EAD1F9A0DB700E9013B /* BeaconConnectionError.swift in Sources */,
 				C6071EA01F9A086C00E9013B /* MockRecieverInteractor.swift in Sources */,
-				C6071E941F9A069700E9013B /* BeaconInteractor.swift in Sources */,
+				C6071EA61F9A0A8B00E9013B /* BeaconInteractorable.swift in Sources */,
 				C6071E791F99F9F800E9013B /* RecieverViewTests.swift in Sources */,
 				C6071E911F9A067C00E9013B /* RecieverViewPresenter.swift in Sources */,
 			);

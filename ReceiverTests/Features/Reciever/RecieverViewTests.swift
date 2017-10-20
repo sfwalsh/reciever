@@ -15,33 +15,58 @@ class RecieverViewPresenterTests: XCTestCase {
      Intention: To test the potentially complicated logic of the RecieverViewPresenter
      */
     
+    var mockView: MockRecieverView?
+    var mockInteractor: MockRecieverInteractor?
+    var mockBeaconInteractor: MockBeaconInteractor?
     var presenter: RecieverViewPresenter?
     
     override func setUp() {
         super.setUp()
-        self.resetPresenter()
+        self.reset()
     }
     
     override func tearDown() {
         super.tearDown()
-        self.resetPresenter()
+        self.reset()
     }
     
-    private func resetPresenter() {
-        let mockView = MockRecieverView()
-        let mockInteractor = MockRecieverInteractor()
-        self.presenter = RecieverViewPresenter(view: mockView,
-                                               interactor: mockInteractor,
-                                               withMaximumDistanceToBeacon: 0.5,
-                                               refreshInterval: 4.0)
+    private func reset() {
+        self.mockView = MockRecieverView()
+        self.mockInteractor = MockRecieverInteractor()
+        self.mockBeaconInteractor = MockBeaconInteractor()
+        
+        // Note: Explicitly unwrapping only for testing.
+        self.presenter = RecieverViewPresenter(view: mockView!,
+                                               interactor: mockInteractor!,
+                                               beaconInteractor: mockBeaconInteractor!,
+                                               withMaximumDistanceToBeacon: 0.5)
     }
     
     func testSuccessfulConnection() {
-        
+        mockBeaconInteractor?.connectionAttemptShouldSucceed = true
+        presenter?.attemptUnlockDoor()
+        XCTAssertEqual(mockView?.mostRecentlyConnectBeaconId, mockBeaconInteractor?.dummyId)
+        XCTAssertEqual(mockInteractor?.lastHitId, mockBeaconInteractor?.dummyId)
     }
     
-    func testConnectionError() {
-        
+    func testNoBeaconFoundConnectionError() {
+        mockBeaconInteractor?.connectionError = BeaconConnectionError.noneFound
+        mockBeaconInteractor?.connectionAttemptShouldSucceed = false
+        presenter?.attemptUnlockDoor()
+        XCTAssertNil(mockView?.mostRecentlyConnectBeaconId)
+        XCTAssertNil(mockInteractor?.lastHitId)
+        XCTAssertEqual(mockView?.mostRecentErrorDescription,
+                       mockBeaconInteractor?.connectionError.localizedDescription)
+    }
+    
+    func testInvalidDistanceConnectionError() {
+        mockBeaconInteractor?.connectionError = BeaconConnectionError.invalidDistance
+        mockBeaconInteractor?.connectionAttemptShouldSucceed = false
+        presenter?.attemptUnlockDoor()
+        XCTAssertNil(mockView?.mostRecentlyConnectBeaconId)
+        XCTAssertNil(mockInteractor?.lastHitId)
+        XCTAssertEqual(mockView?.mostRecentErrorDescription,
+                       mockBeaconInteractor?.connectionError.localizedDescription)
     }
     
 }
