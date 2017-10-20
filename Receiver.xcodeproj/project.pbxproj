@@ -31,6 +31,11 @@
 		C6330D5C1F9A130200C5C9EB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6330D5A1F9A129C00C5C9EB /* Localizable.strings */; };
 		C688EDE71F9A39F00065D95D /* RecieverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688EDE51F9A39C50065D95D /* RecieverViewController.swift */; };
 		C688EDE91F9A3A760065D95D /* RecieverBeaconInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688EDE81F9A3A720065D95D /* RecieverBeaconInteractor.swift */; };
+		C688EDEC1F9A4C210065D95D /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688EDEB1F9A4C210065D95D /* RoundImageView.swift */; };
+		C688EDEE1F9A4D470065D95D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688EDED1F9A4D470065D95D /* ProfileViewController.swift */; };
+		C688EDF11F9A50340065D95D /* SubMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688EDF01F9A50340065D95D /* SubMenuCell.swift */; };
+		C688EDF31F9A50750065D95D /* UserInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688EDF21F9A50750065D95D /* UserInfoCell.swift */; };
+		C688EDF51F9A51E90065D95D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688EDF41F9A51E90065D95D /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +71,11 @@
 		C6330D5A1F9A129C00C5C9EB /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		C688EDE51F9A39C50065D95D /* RecieverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieverViewController.swift; sourceTree = "<group>"; };
 		C688EDE81F9A3A720065D95D /* RecieverBeaconInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieverBeaconInteractor.swift; sourceTree = "<group>"; };
+		C688EDEB1F9A4C210065D95D /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
+		C688EDED1F9A4D470065D95D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C688EDF01F9A50340065D95D /* SubMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubMenuCell.swift; sourceTree = "<group>"; };
+		C688EDF21F9A50750065D95D /* UserInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoCell.swift; sourceTree = "<group>"; };
+		C688EDF41F9A51E90065D95D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +121,8 @@
 				C6071E971F9A073B00E9013B /* Features */,
 				C6071EAB1F9A0DB300E9013B /* DoorError.swift */,
 				C6071EA41F9A0A7800E9013B /* BeaconInteractorable.swift */,
+				C688EDF41F9A51E90065D95D /* User.swift */,
+				C688EDEB1F9A4C210065D95D /* RoundImageView.swift */,
 				C6071E831F99FBF100E9013B /* APIRouter.swift */,
 				C6071E671F99F9F800E9013B /* Main.storyboard */,
 				C6071E6A1F99F9F800E9013B /* Assets.xcassets */,
@@ -154,6 +166,7 @@
 		C6071E971F9A073B00E9013B /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				C688EDEF1F9A4D4D0065D95D /* Profile */,
 				C6071E961F9A073300E9013B /* Reciever */,
 			);
 			path = Features;
@@ -184,6 +197,24 @@
 				C6071EA91F9A0B9000E9013B /* MockBeaconInteractor.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		C688EDEF1F9A4D4D0065D95D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C688EDF61F9A54740065D95D /* Cells */,
+				C688EDED1F9A4D470065D95D /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C688EDF61F9A54740065D95D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C688EDF01F9A50340065D95D /* SubMenuCell.swift */,
+				C688EDF21F9A50750065D95D /* UserInfoCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,9 +324,14 @@
 			files = (
 				C6071EAC1F9A0DB300E9013B /* DoorError.swift in Sources */,
 				C688EDE91F9A3A760065D95D /* RecieverBeaconInteractor.swift in Sources */,
+				C688EDEC1F9A4C210065D95D /* RoundImageView.swift in Sources */,
 				C6071E881F99FCA100E9013B /* RecieverViewPresenter.swift in Sources */,
 				C6071E841F99FBF100E9013B /* APIRouter.swift in Sources */,
 				C688EDE71F9A39F00065D95D /* RecieverViewController.swift in Sources */,
+				C688EDEE1F9A4D470065D95D /* ProfileViewController.swift in Sources */,
+				C688EDF11F9A50340065D95D /* SubMenuCell.swift in Sources */,
+				C688EDF51F9A51E90065D95D /* User.swift in Sources */,
+				C688EDF31F9A50750065D95D /* UserInfoCell.swift in Sources */,
 				C6071E991F9A075400E9013B /* RecieverInteractor.swift in Sources */,
 				C6071E8A1F99FCEB00E9013B /* RecieverView.swift in Sources */,
 				C6071E861F99FC6000E9013B /* RecieverViewInteractor.swift in Sources */,
