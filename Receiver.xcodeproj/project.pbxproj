@@ -13,6 +13,12 @@
 		C6071E6B1F99F9F800E9013B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6071E6A1F99F9F800E9013B /* Assets.xcassets */; };
 		C6071E6E1F99F9F800E9013B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6071E6C1F99F9F800E9013B /* LaunchScreen.storyboard */; };
 		C6071E791F99F9F800E9013B /* ReceiverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E781F99F9F800E9013B /* ReceiverTests.swift */; };
+		C6071E841F99FBF100E9013B /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E831F99FBF100E9013B /* APIRouter.swift */; };
+		C6071E861F99FC6000E9013B /* RecieverViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E851F99FC6000E9013B /* RecieverViewInteractor.swift */; };
+		C6071E881F99FCA100E9013B /* RecieverViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E871F99FCA100E9013B /* RecieverViewPresenter.swift */; };
+		C6071E8A1F99FCEB00E9013B /* RecieverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E891F99FCEB00E9013B /* RecieverView.swift */; };
+		C6071E8C1F99FDA500E9013B /* BeaconInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E8B1F99FDA500E9013B /* BeaconInteractor.swift */; };
+		C6071E8E1F9A022F00E9013B /* MockRecieverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E8D1F9A022F00E9013B /* MockRecieverView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,12 @@
 		C6071E741F99F9F800E9013B /* ReceiverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReceiverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6071E781F99F9F800E9013B /* ReceiverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverTests.swift; sourceTree = "<group>"; };
 		C6071E7A1F99F9F800E9013B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6071E831F99FBF100E9013B /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		C6071E851F99FC6000E9013B /* RecieverViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieverViewInteractor.swift; sourceTree = "<group>"; };
+		C6071E871F99FCA100E9013B /* RecieverViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieverViewPresenter.swift; sourceTree = "<group>"; };
+		C6071E891F99FCEB00E9013B /* RecieverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieverView.swift; sourceTree = "<group>"; };
+		C6071E8B1F99FDA500E9013B /* BeaconInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconInteractor.swift; sourceTree = "<group>"; };
+		C6071E8D1F9A022F00E9013B /* MockRecieverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRecieverView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +91,15 @@
 			children = (
 				C6071E631F99F9F800E9013B /* AppDelegate.swift */,
 				C6071E651F99F9F800E9013B /* ViewController.swift */,
+				C6071E891F99FCEB00E9013B /* RecieverView.swift */,
+				C6071E871F99FCA100E9013B /* RecieverViewPresenter.swift */,
+				C6071E851F99FC6000E9013B /* RecieverViewInteractor.swift */,
+				C6071E8B1F99FDA500E9013B /* BeaconInteractor.swift */,
+				C6071E831F99FBF100E9013B /* APIRouter.swift */,
 				C6071E671F99F9F800E9013B /* Main.storyboard */,
 				C6071E6A1F99F9F800E9013B /* Assets.xcassets */,
 				C6071E6C1F99F9F800E9013B /* LaunchScreen.storyboard */,
+				C6071E8D1F9A022F00E9013B /* MockRecieverView.swift */,
 				C6071E6F1F99F9F800E9013B /* Info.plist */,
 			);
 			path = Receiver;
@@ -200,6 +218,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6071E661F99F9F800E9013B /* ViewController.swift in Sources */,
+				C6071E8E1F9A022F00E9013B /* MockRecieverView.swift in Sources */,
+				C6071E881F99FCA100E9013B /* RecieverViewPresenter.swift in Sources */,
+				C6071E841F99FBF100E9013B /* APIRouter.swift in Sources */,
+				C6071E8C1F99FDA500E9013B /* BeaconInteractor.swift in Sources */,
+				C6071E8A1F99FCEB00E9013B /* RecieverView.swift in Sources */,
+				C6071E861F99FC6000E9013B /* RecieverViewInteractor.swift in Sources */,
 				C6071E641F99F9F800E9013B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -341,7 +365,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -356,6 +380,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29XC7B4KB4;
 				INFOPLIST_FILE = Receiver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ie.greenby.Receiver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -371,6 +396,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29XC7B4KB4;
 				INFOPLIST_FILE = Receiver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ie.greenby.Receiver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
