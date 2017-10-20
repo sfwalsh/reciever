@@ -9,6 +9,8 @@
 import Foundation
 
 protocol RecieverView: class {
+    func showLoader()
+    func hideLoader()
     func logConnection(toBeaconWithId beaconId: Int)
-    func logError(error: BeaconConnectionError)
+    func logError(error: DoorError)
 }

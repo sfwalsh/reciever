@@ -6,7 +6,9 @@
   Copyright © 2017 Greenby Apps. All rights reserved.
 */
 
+"RecieverView_connectionSuccess" = "Opened door with id %i";
 
 // MARK: Errors
-"BeaconConnectionError_invalidDistance" = "No doors found in range";
-"BeaconConnectionError_noneFound" = "No doors found";
+"DoorError_invalidDistance" = "No doors found in range";
+"DoorError_noneFound" = "No doors found";
+"DoorError_network" = "There was an issue reaching the network";

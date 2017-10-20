@@ -15,7 +15,7 @@ struct RecieverBeaconInteractor: BeaconInteractorable {
     
     func attemptConnectToBeacon(withMaximumDistanceToBeacon maximumDistance: Float,
                                 success: (_ beaconId: Int) -> Void,
-                                failure: (BeaconConnectionError) -> Void) {
+                                failure: (DoorError) -> Void) {
         success(dummyId)
     }
 }

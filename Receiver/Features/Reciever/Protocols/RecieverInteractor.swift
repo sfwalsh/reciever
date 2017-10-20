@@ -9,5 +9,7 @@
 import Foundation
 
 protocol RecieverInteractor {
-    func unlockDoor(withId id: Int)
+    func unlockDoor(withId id: Int,
+                    success: @escaping () -> Void,
+                    failure: @escaping (DoorError) -> Void)
 }

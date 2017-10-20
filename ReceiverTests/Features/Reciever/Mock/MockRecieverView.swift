@@ -13,12 +13,21 @@ class MockRecieverView: NSObject, RecieverView {
     var presenter: RecieverViewPresenter?
     var mostRecentlyConnectBeaconId: Int?
     var mostRecentErrorDescription: String?
+    var isShowingMiniLoader: Bool = false
     
-    func logConnection(toBeaconWithId beaconId: Int) {
-        self.mostRecentlyConnectBeaconId = beaconId
+    func showLoader() {
+        isShowingMiniLoader = true
     }
     
-    func logError(error: BeaconConnectionError) {
-        self.mostRecentErrorDescription = error.localizedDescription
+    func hideLoader() {
+        isShowingMiniLoader = false
+    }
+    
+    func logConnection(toBeaconWithId beaconId: Int) {
+        mostRecentlyConnectBeaconId = beaconId
+    }
+    
+    func logError(error: DoorError) {
+        mostRecentErrorDescription = error.localizedDescription
     }
 }

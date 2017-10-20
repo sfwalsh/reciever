@@ -25,21 +25,36 @@ struct RecieverViewPresenter {
         self.maximumDistance = maximumDistance
     }
     
+    func performInitialSetup() {
+        view.hideLoader()
+    }
+    
     func setupRefreshTimer(_ refreshInterval: TimeInterval) {
         Timer.scheduledTimer(withTimeInterval: refreshInterval,
                              repeats: true,
                              block: { (timer) in
-                                self.attemptUnlockDoor()
+                                self.attemptConnection()
         })
     }
     
-    func attemptUnlockDoor() {
+    func attemptConnection() {
+        view.showLoader()
         beaconInteractor.attemptConnectToBeacon(withMaximumDistanceToBeacon: maximumDistance,
-                                                success: { (beaconId) in
-                                                    self.view.logConnection(toBeaconWithId: beaconId)
-                                                    self.interactor.unlockDoor(withId: beaconId)
-        }) { (error) in
-            self.view.logError(error: error)
-        }
+                                                success: attemptUnlockDoor(withId:),
+                                                failure: logError(error:))
+    }
+    
+    func attemptUnlockDoor(withId id: Int) {
+        interactor.unlockDoor(withId: id,
+                              success: {
+                                self.view.hideLoader()
+                                self.view.logConnection(toBeaconWithId: id)
+        },
+                              failure: logError(error:))
+    }
+    
+    func logError(error: DoorError) {
+        view.hideLoader()
+        view.logError(error: error)
     }
 }

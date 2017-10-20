@@ -10,12 +10,12 @@ import Foundation
 
 class MockBeaconInteractor: BeaconInteractorable {
     
-    var connectionError: BeaconConnectionError?
+    var connectionError: DoorError?
     let dummyId: Int = 5124
     
     func attemptConnectToBeacon(withMaximumDistanceToBeacon maximumDistance: Float,
                                 success: (Int) -> Void,
-                                failure: (BeaconConnectionError) -> Void) {
+                                failure: (DoorError) -> Void) {
         if let error = self.connectionError {
             failure(error)
         } else {
