@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Receiver
+
+  Created by Stephen Walsh on 20/10/2017.
+  Copyright © 2017 Greenby Apps. All rights reserved.
+*/
+
+
+// MARK: Errors
+"BeaconConnectionError_invalidDistance" = "No doors found in range";
+"BeaconConnectionError_noneFound" = "No doors found";

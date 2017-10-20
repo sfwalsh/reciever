@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C6071E641F99F9F800E9013B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E631F99F9F800E9013B /* AppDelegate.swift */; };
-		C6071E661F99F9F800E9013B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E651F99F9F800E9013B /* ViewController.swift */; };
+		C6071E661F99F9F800E9013B /* RecieverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E651F99F9F800E9013B /* RecieverViewController.swift */; };
 		C6071E691F99F9F800E9013B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6071E671F99F9F800E9013B /* Main.storyboard */; };
 		C6071E6B1F99F9F800E9013B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6071E6A1F99F9F800E9013B /* Assets.xcassets */; };
 		C6071E6E1F99F9F800E9013B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6071E6C1F99F9F800E9013B /* LaunchScreen.storyboard */; };
@@ -29,6 +29,8 @@
 		C6071EAA1F9A0B9000E9013B /* MockBeaconInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071EA91F9A0B9000E9013B /* MockBeaconInteractor.swift */; };
 		C6071EAC1F9A0DB300E9013B /* BeaconConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071EAB1F9A0DB300E9013B /* BeaconConnectionError.swift */; };
 		C6071EAD1F9A0DB700E9013B /* BeaconConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071EAB1F9A0DB300E9013B /* BeaconConnectionError.swift */; };
+		C6330D5B1F9A129C00C5C9EB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6330D5A1F9A129C00C5C9EB /* Localizable.strings */; };
+		C6330D5C1F9A130200C5C9EB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6330D5A1F9A129C00C5C9EB /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +46,7 @@
 /* Begin PBXFileReference section */
 		C6071E601F99F9F800E9013B /* Receiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Receiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6071E631F99F9F800E9013B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C6071E651F99F9F800E9013B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C6071E651F99F9F800E9013B /* RecieverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieverViewController.swift; sourceTree = "<group>"; };
 		C6071E681F99F9F800E9013B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6071E6A1F99F9F800E9013B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6071E6D1F99F9F800E9013B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		C6071EA71F9A0B0200E9013B /* RecieverBeaconInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecieverBeaconInteractor.swift; path = Receiver/RecieverBeaconInteractor.swift; sourceTree = SOURCE_ROOT; };
 		C6071EA91F9A0B9000E9013B /* MockBeaconInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBeaconInteractor.swift; sourceTree = "<group>"; };
 		C6071EAB1F9A0DB300E9013B /* BeaconConnectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconConnectionError.swift; sourceTree = "<group>"; };
+		C6330D5A1F9A129C00C5C9EB /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				C6071E631F99F9F800E9013B /* AppDelegate.swift */,
-				C6071E651F99F9F800E9013B /* ViewController.swift */,
+				C6071E651F99F9F800E9013B /* RecieverViewController.swift */,
 				C6071E971F9A073B00E9013B /* Features */,
 				C6071EA41F9A0A7800E9013B /* BeaconInteractorable.swift */,
 				C6071EAB1F9A0DB300E9013B /* BeaconConnectionError.swift */,
@@ -114,6 +117,7 @@
 				C6071E6A1F99F9F800E9013B /* Assets.xcassets */,
 				C6071E6C1F99F9F800E9013B /* LaunchScreen.storyboard */,
 				C6071E6F1F99F9F800E9013B /* Info.plist */,
+				C6330D5A1F9A129C00C5C9EB /* Localizable.strings */,
 			);
 			path = Receiver;
 			sourceTree = "<group>";
@@ -266,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6071E6E1F99F9F800E9013B /* LaunchScreen.storyboard in Resources */,
+				C6330D5B1F9A129C00C5C9EB /* Localizable.strings in Resources */,
 				C6071E6B1F99F9F800E9013B /* Assets.xcassets in Resources */,
 				C6071E691F99F9F800E9013B /* Main.storyboard in Resources */,
 			);
@@ -275,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6330D5C1F9A130200C5C9EB /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6071EAC1F9A0DB300E9013B /* BeaconConnectionError.swift in Sources */,
-				C6071E661F99F9F800E9013B /* ViewController.swift in Sources */,
+				C6071E661F99F9F800E9013B /* RecieverViewController.swift in Sources */,
 				C6071E881F99FCA100E9013B /* RecieverViewPresenter.swift in Sources */,
 				C6071E841F99FBF100E9013B /* APIRouter.swift in Sources */,
 				C6071E991F9A075400E9013B /* RecieverInteractor.swift in Sources */,

@@ -15,9 +15,9 @@ enum BeaconConnectionError: Error {
     var localizedDescription: String {
         switch self {
         case .invalidDistance:
-            return "No doors found in range"
+            return NSLocalizedString("BeaconConnectionError_invalidDistance", comment: "")
         case .noneFound:
-            return "No doors found"
+            return NSLocalizedString("BeaconConnectionError_noneFound", comment: "")
         }
     }
 }
