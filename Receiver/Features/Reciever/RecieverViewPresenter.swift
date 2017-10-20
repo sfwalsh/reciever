@@ -11,16 +11,17 @@ import Foundation
 class RecieverViewPresenter: NSObject {
     
     unowned let view: RecieverView
+    private let interactor: RecieverInteractor
     private let maximumDistance: Float
-    private let interactor: RecieverViewInteractor
     private var timer: Timer?
     
     init(view: RecieverView,
+         interactor: RecieverInteractor,
          withMaximumDistanceToBeacon maximumDistance: Float,
          refreshInterval: TimeInterval) {
         self.view = view
+        self.interactor = interactor
         self.maximumDistance = maximumDistance
-        self.interactor = RecieverViewInteractor()
         super.init()
         
         setupRefreshTimer(refreshInterval)
