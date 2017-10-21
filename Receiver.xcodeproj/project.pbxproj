@@ -31,7 +31,12 @@
 		C6330D5C1F9A130200C5C9EB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6330D5A1F9A129C00C5C9EB /* Localizable.strings */; };
 		C68611A31F9B938600BBAA07 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68611A21F9B938600BBAA07 /* DummyViewController.swift */; };
 		C68611A61F9B93F600BBAA07 /* Dummy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C68611A51F9B93F600BBAA07 /* Dummy.storyboard */; };
-		C68611A81F9B941D00BBAA07 /* ViewControllerInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68611A71F9B941D00BBAA07 /* ViewControllerInstantiable.swift */; };
+		C68611AA1F9B971600BBAA07 /* ProfileViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68611A91F9B971600BBAA07 /* ProfileViewPresenter.swift */; };
+		C68611AC1F9B972700BBAA07 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68611AB1F9B972700BBAA07 /* ProfileView.swift */; };
+		C68611AF1F9B981100BBAA07 /* ProfileViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68611AE1F9B981100BBAA07 /* ProfileViewInteractor.swift */; };
+		C68611B11F9B98EC00BBAA07 /* ProfileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68611B01F9B98EC00BBAA07 /* ProfileItem.swift */; };
+		C68611B41F9B9AAC00BBAA07 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68611B31F9B9AAC00BBAA07 /* Presentable.swift */; };
+		C68611B91F9B9B1800BBAA07 /* ViewControllerInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68611B81F9B9B0B00BBAA07 /* ViewControllerInstantiable.swift */; };
 		C688EDE71F9A39F00065D95D /* RecieverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688EDE51F9A39C50065D95D /* RecieverViewController.swift */; };
 		C688EDE91F9A3A760065D95D /* RecieverBeaconInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688EDE81F9A3A720065D95D /* RecieverBeaconInteractor.swift */; };
 		C688EDEC1F9A4C210065D95D /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688EDEB1F9A4C210065D95D /* RoundImageView.swift */; };
@@ -74,7 +79,12 @@
 		C6330D5A1F9A129C00C5C9EB /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		C68611A21F9B938600BBAA07 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		C68611A51F9B93F600BBAA07 /* Dummy.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dummy.storyboard; sourceTree = "<group>"; };
-		C68611A71F9B941D00BBAA07 /* ViewControllerInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInstantiable.swift; sourceTree = "<group>"; };
+		C68611A91F9B971600BBAA07 /* ProfileViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewPresenter.swift; sourceTree = "<group>"; };
+		C68611AB1F9B972700BBAA07 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		C68611AE1F9B981100BBAA07 /* ProfileViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewInteractor.swift; sourceTree = "<group>"; };
+		C68611B01F9B98EC00BBAA07 /* ProfileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItem.swift; sourceTree = "<group>"; };
+		C68611B31F9B9AAC00BBAA07 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		C68611B81F9B9B0B00BBAA07 /* ViewControllerInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerInstantiable.swift; path = Receiver/ViewControllerInstantiable.swift; sourceTree = SOURCE_ROOT; };
 		C688EDE51F9A39C50065D95D /* RecieverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieverViewController.swift; sourceTree = "<group>"; };
 		C688EDE81F9A3A720065D95D /* RecieverBeaconInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieverBeaconInteractor.swift; sourceTree = "<group>"; };
 		C688EDEB1F9A4C210065D95D /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
@@ -125,15 +135,13 @@
 			children = (
 				C6071E631F99F9F800E9013B /* AppDelegate.swift */,
 				C6071E971F9A073B00E9013B /* Features */,
-				C6071EAB1F9A0DB300E9013B /* DoorError.swift */,
-				C6071EA41F9A0A7800E9013B /* BeaconInteractorable.swift */,
-				C688EDF41F9A51E90065D95D /* User.swift */,
-				C688EDEB1F9A4C210065D95D /* RoundImageView.swift */,
-				C6071E831F99FBF100E9013B /* APIRouter.swift */,
-				C68611A71F9B941D00BBAA07 /* ViewControllerInstantiable.swift */,
+				C68611B71F9B9B0500BBAA07 /* Models */,
+				C68611B61F9B9AFD00BBAA07 /* Components */,
+				C68611B51F9B9AF600BBAA07 /* Protocols */,
+				C68611BA1F9B9B2200BBAA07 /* API */,
 				C6071E671F99F9F800E9013B /* Main.storyboard */,
-				C6071E6A1F99F9F800E9013B /* Assets.xcassets */,
 				C6071E6C1F99F9F800E9013B /* LaunchScreen.storyboard */,
+				C6071E6A1F99F9F800E9013B /* Assets.xcassets */,
 				C6071E6F1F99F9F800E9013B /* Info.plist */,
 				C6330D5A1F9A129C00C5C9EB /* Localizable.strings */,
 			);
@@ -216,11 +224,66 @@
 			path = DummyView;
 			sourceTree = "<group>";
 		};
+		C68611AD1F9B972E00BBAA07 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C68611AB1F9B972700BBAA07 /* ProfileView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C68611B21F9B9A5C00BBAA07 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C68611B01F9B98EC00BBAA07 /* ProfileItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C68611B51F9B9AF600BBAA07 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C68611B81F9B9B0B00BBAA07 /* ViewControllerInstantiable.swift */,
+				C6071EA41F9A0A7800E9013B /* BeaconInteractorable.swift */,
+				C68611B31F9B9AAC00BBAA07 /* Presentable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C68611B61F9B9AFD00BBAA07 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C688EDEB1F9A4C210065D95D /* RoundImageView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C68611B71F9B9B0500BBAA07 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C6071EAB1F9A0DB300E9013B /* DoorError.swift */,
+				C688EDF41F9A51E90065D95D /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C68611BA1F9B9B2200BBAA07 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C6071E831F99FBF100E9013B /* APIRouter.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		C688EDEF1F9A4D4D0065D95D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				C68611B21F9B9A5C00BBAA07 /* Models */,
 				C688EDF61F9A54740065D95D /* Cells */,
+				C68611AD1F9B972E00BBAA07 /* Protocols */,
 				C688EDED1F9A4D470065D95D /* ProfileViewController.swift */,
+				C68611A91F9B971600BBAA07 /* ProfileViewPresenter.swift */,
+				C68611AE1F9B981100BBAA07 /* ProfileViewInteractor.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -341,12 +404,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6071EAC1F9A0DB300E9013B /* DoorError.swift in Sources */,
+				C68611AF1F9B981100BBAA07 /* ProfileViewInteractor.swift in Sources */,
+				C68611B91F9B9B1800BBAA07 /* ViewControllerInstantiable.swift in Sources */,
+				C68611AA1F9B971600BBAA07 /* ProfileViewPresenter.swift in Sources */,
 				C688EDE91F9A3A760065D95D /* RecieverBeaconInteractor.swift in Sources */,
 				C688EDEC1F9A4C210065D95D /* RoundImageView.swift in Sources */,
 				C6071E881F99FCA100E9013B /* RecieverViewPresenter.swift in Sources */,
 				C6071E841F99FBF100E9013B /* APIRouter.swift in Sources */,
 				C688EDE71F9A39F00065D95D /* RecieverViewController.swift in Sources */,
-				C68611A81F9B941D00BBAA07 /* ViewControllerInstantiable.swift in Sources */,
+				C68611B41F9B9AAC00BBAA07 /* Presentable.swift in Sources */,
+				C68611B11F9B98EC00BBAA07 /* ProfileItem.swift in Sources */,
 				C688EDEE1F9A4D470065D95D /* ProfileViewController.swift in Sources */,
 				C688EDF11F9A50340065D95D /* SubMenuCell.swift in Sources */,
 				C688EDF51F9A51E90065D95D /* User.swift in Sources */,
@@ -355,6 +422,7 @@
 				C6071E8A1F99FCEB00E9013B /* RecieverView.swift in Sources */,
 				C6071E861F99FC6000E9013B /* RecieverViewInteractor.swift in Sources */,
 				C6071EA51F9A0A7800E9013B /* BeaconInteractorable.swift in Sources */,
+				C68611AC1F9B972700BBAA07 /* ProfileView.swift in Sources */,
 				C6071E641F99F9F800E9013B /* AppDelegate.swift in Sources */,
 				C68611A31F9B938600BBAA07 /* DummyViewController.swift in Sources */,
 			);

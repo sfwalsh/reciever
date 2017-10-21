@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecieverViewController: UIViewController, RecieverView {
+class RecieverViewController: UIViewController, RecieverView, Presentable {
     
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -20,10 +20,9 @@ class RecieverViewController: UIViewController, RecieverView {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPresenter()
-        presenter.performInitialSetup()
     }
     
-    private func setupPresenter() {
+    internal func setupPresenter() {
         let interactor = RecieverViewInteractor()
         let beaconInteractor = RecieverBeaconInteractor()
         self.presenter = RecieverViewPresenter(view: self,
@@ -31,6 +30,7 @@ class RecieverViewController: UIViewController, RecieverView {
                                                beaconInteractor: beaconInteractor,
                                                withMaximumDistanceToBeacon: maximumDistanceAllowed)
         presenter?.setupRefreshTimer(refreshInterval)
+        presenter.performInitialSetup()
     }
 
     func showLoader() {

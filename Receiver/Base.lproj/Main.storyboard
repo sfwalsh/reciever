@@ -120,10 +120,6 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
-                                <connections>
-                                    <outlet property="dataSource" destination="rpZ-vi-YOX" id="stY-tQ-Mhr"/>
-                                    <outlet property="delegate" destination="rpZ-vi-YOX" id="NHf-TP-gYV"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
