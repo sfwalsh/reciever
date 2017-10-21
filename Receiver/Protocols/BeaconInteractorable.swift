@@ -9,6 +9,8 @@
 import Foundation
 
 protocol BeaconInteractorable {
+    func startRangingBeacons()
+    func stopRangingBeacons()
     func attemptConnectToBeacon(withMaximumDistanceToBeacon maximumDistance: Float,
                                        success: (_ beaconId: Int) -> Void,
                                        failure: (DoorError) -> Void)

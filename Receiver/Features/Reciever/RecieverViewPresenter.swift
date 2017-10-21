@@ -27,6 +27,11 @@ struct RecieverViewPresenter {
     
     func performInitialSetup() {
         view.hideLoader()
+        beaconInteractor.startRangingBeacons()
+    }
+    
+    func stopListeningForBeacons() {
+        beaconInteractor.stopRangingBeacons()
     }
     
     func setupRefreshTimer(_ refreshInterval: TimeInterval) {

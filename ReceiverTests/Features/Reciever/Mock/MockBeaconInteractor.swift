@@ -10,8 +10,17 @@ import Foundation
 
 class MockBeaconInteractor: BeaconInteractorable {
     
+    var isListeningForBeacons: Bool = false
     var connectionError: DoorError?
     let dummyId: Int = 5124
+    
+    func startRangingBeacons() {
+        isListeningForBeacons = true
+    }
+    
+    func stopRangingBeacons() {
+        isListeningForBeacons = false
+    }
     
     func attemptConnectToBeacon(withMaximumDistanceToBeacon maximumDistance: Float,
                                 success: (Int) -> Void,

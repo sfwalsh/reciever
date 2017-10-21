@@ -37,6 +37,7 @@
 		C68611B11F9B98EC00BBAA07 /* ProfileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68611B01F9B98EC00BBAA07 /* ProfileItem.swift */; };
 		C68611B41F9B9AAC00BBAA07 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68611B31F9B9AAC00BBAA07 /* Presentable.swift */; };
 		C68611B91F9B9B1800BBAA07 /* ViewControllerInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68611B81F9B9B0B00BBAA07 /* ViewControllerInstantiable.swift */; };
+		C68611BD1F9B9DCD00BBAA07 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68611BC1F9B9DCD00BBAA07 /* CoreLocation.framework */; };
 		C688EDE71F9A39F00065D95D /* RecieverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688EDE51F9A39C50065D95D /* RecieverViewController.swift */; };
 		C688EDE91F9A3A760065D95D /* RecieverBeaconInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688EDE81F9A3A720065D95D /* RecieverBeaconInteractor.swift */; };
 		C688EDEC1F9A4C210065D95D /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688EDEB1F9A4C210065D95D /* RoundImageView.swift */; };
@@ -85,6 +86,7 @@
 		C68611B01F9B98EC00BBAA07 /* ProfileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItem.swift; sourceTree = "<group>"; };
 		C68611B31F9B9AAC00BBAA07 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		C68611B81F9B9B0B00BBAA07 /* ViewControllerInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerInstantiable.swift; path = Receiver/ViewControllerInstantiable.swift; sourceTree = SOURCE_ROOT; };
+		C68611BC1F9B9DCD00BBAA07 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C688EDE51F9A39C50065D95D /* RecieverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieverViewController.swift; sourceTree = "<group>"; };
 		C688EDE81F9A3A720065D95D /* RecieverBeaconInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieverBeaconInteractor.swift; sourceTree = "<group>"; };
 		C688EDEB1F9A4C210065D95D /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C68611BD1F9B9DCD00BBAA07 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +121,7 @@
 				C6071E621F99F9F800E9013B /* Receiver */,
 				C6071E771F99F9F800E9013B /* ReceiverTests */,
 				C6071E611F99F9F800E9013B /* Products */,
+				C68611BB1F9B9DCD00BBAA07 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -273,6 +277,14 @@
 				C6071E831F99FBF100E9013B /* APIRouter.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		C68611BB1F9B9DCD00BBAA07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C68611BC1F9B9DCD00BBAA07 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		C688EDEF1F9A4D4D0065D95D /* Profile */ = {

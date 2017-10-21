@@ -59,5 +59,9 @@ class RecieverViewController: UIViewController, RecieverView, Presentable {
             self.valueLabel.text = error.localizedDescription
         }
     }
+    
+    deinit {
+        presenter.stopListeningForBeacons()
+    }
 }
 
