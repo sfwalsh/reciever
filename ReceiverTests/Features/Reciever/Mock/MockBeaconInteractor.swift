@@ -10,7 +10,6 @@ import Foundation
 
 class MockBeaconInteractor: BeaconInteractorable {
     
-    
     var isListeningForBeacons: Bool = false
     var connectionError: DoorError?
     let dummyId: Int = 5124

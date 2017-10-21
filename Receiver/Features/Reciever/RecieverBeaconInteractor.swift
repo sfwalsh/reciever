@@ -26,6 +26,16 @@ class RecieverBeaconInteractor: NSObject, BeaconInteractorable {
         super.init()
         
         locationManager.delegate = self
+        assertCorrectAuthorizationStatus()
+    }
+    
+    private func assertCorrectAuthorizationStatus() {
+        switch CLLocationManager.authorizationStatus() {
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+        default:
+            break
+        }
     }
     
     func startMonitoringBeacons() {
