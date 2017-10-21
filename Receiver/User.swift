@@ -14,6 +14,6 @@ struct User {
     let image: UIImage
 
     static let current = User(name: "Brian Chaffin",
-                              image: UIImage())
+                              image: UIImage(named: "Dummy")!)
     
 }

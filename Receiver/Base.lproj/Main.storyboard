@@ -60,7 +60,8 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ib7-Ct-waq">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="userInfo" rowHeight="174" id="9lz-Ct-vOU" userLabel="User Info Cell" customClass="UserInfoCell" customModule="Receiver" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="174"/>
@@ -100,7 +101,7 @@
                                             <outlet property="profileImageView" destination="a8N-IF-KG1" id="Fhe-Ea-EHa"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="subMenu" textLabel="PQb-9i-qza" style="IBUITableViewCellStyleDefault" id="4Sq-bJ-3Vt" customClass="SubMenuCell" customModule="Receiver" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="subMenu" textLabel="PQb-9i-qza" style="IBUITableViewCellStyleDefault" id="4Sq-bJ-3Vt" customClass="SubMenuCell" customModule="Receiver" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="202" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Sq-bJ-3Vt" id="9ty-Vm-La2">

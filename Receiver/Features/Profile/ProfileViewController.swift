@@ -18,6 +18,12 @@ private enum ProfileItem {
     case subMenu(title: String, image: UIImage?, action: (() -> Void))
 }
 
+private enum SectionType: Int {
+    case userInfo = 0
+    case editInfo = 1
+    case action = 2
+}
+
 class ProfileViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -25,30 +31,31 @@ class ProfileViewController: UIViewController {
     private var items: [[ProfileItem]] {
         return [[.userInfo], editInfoSection, actionSection]
     }
+    
     private var editInfoSection: [ProfileItem] {
         return [
-            ProfileItem.subMenu(title: "Name, Phone Numbers, Email", image: nil, action: {
-                
+            ProfileItem.subMenu(title: "Name, Phone Numbers, Email", image: nil, action: { [weak self] in
+                self?.openDummyView(withTitle: "Name, Phone Numbers, Email")
             }),
-            ProfileItem.subMenu(title: "Password & Security", image: nil, action: {
-                
+            ProfileItem.subMenu(title: "Password & Security", image: nil, action: { [weak self] in
+                self?.openDummyView(withTitle: "Password & Security")
             }),
-            ProfileItem.subMenu(title: "Payment & Shipping", image: nil, action: {
-                
+            ProfileItem.subMenu(title: "Payment & Shipping", image: nil, action: { [weak self] in
+                self?.openDummyView(withTitle: "Payment & Shipping")
             })
         ]
     }
     
     private var actionSection: [ProfileItem] {
         return [
-            ProfileItem.subMenu(title: "Action One", image: UIImage(), action: {
-                
+            ProfileItem.subMenu(title: "iCloud", image: UIImage(named: "ActionImage"), action: { [weak self] in
+                self?.openDummyView(withTitle: "iCloud")
             }),
-            ProfileItem.subMenu(title: "Action Two", image: UIImage(), action: {
-                
+            ProfileItem.subMenu(title: "iTunes & App Store", image: UIImage(named: "ActionImage"), action: { [weak self] in
+                self?.openDummyView(withTitle: "iTunes & App Store")
             }),
-            ProfileItem.subMenu(title: "Action Three", image: UIImage(), action: {
-                
+            ProfileItem.subMenu(title: "Set Up Family Sharing...", image: UIImage(named: "ActionImage"), action: { [weak self] in
+                self?.openDummyView(withTitle: "Set Up Family Sharing...")
             })
         ]
     }
@@ -56,6 +63,12 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.reloadData()
+    }
+    
+    func openDummyView(withTitle title: String) {
+        let dummyView = DummyViewController.instantiateInstance(withTitle: title)
+        navigationController?.pushViewController(dummyView,
+                                                 animated: true)
     }
 }
 
@@ -66,6 +79,7 @@ extension ProfileViewController: UITableViewDelegate {
         switch item {
         case .subMenu(_, _, let action):
             action()
+            tableView.deselectRow(at: indexPath, animated: true)
         default:
             break
         }
@@ -84,7 +98,19 @@ extension ProfileViewController: UITableViewDelegate {
 
 extension ProfileViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
+        switch section {
+        case SectionType.action.rawValue:
+            return 30
+        case SectionType.editInfo.rawValue:
+            return 30
+        default: return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.9372549057, blue: 0.9568627477, alpha: 1)
+        return view
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

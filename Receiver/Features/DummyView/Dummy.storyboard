@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dummy View Controller-->
+        <scene sceneID="Ean-V5-v2C">
+            <objects>
+                <viewController storyboardIdentifier="DummyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LAn-ef-oHV" customClass="DummyViewController" customModule="Receiver" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3iB-ax-f4s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e24-tP-UWi">
+                                <rect key="frame" x="170" y="323" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e24-tP-UWi" firstAttribute="centerX" secondItem="3iB-ax-f4s" secondAttribute="centerX" id="5FQ-WB-HrW"/>
+                            <constraint firstItem="9O0-vp-1hy" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="e24-tP-UWi" secondAttribute="trailing" constant="26" id="Bd1-SQ-U5L"/>
+                            <constraint firstItem="9O0-vp-1hy" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="e24-tP-UWi" secondAttribute="bottom" constant="26" id="Cru-4C-Thl"/>
+                            <constraint firstItem="e24-tP-UWi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9O0-vp-1hy" secondAttribute="leading" constant="26" id="VBl-cj-Ing"/>
+                            <constraint firstItem="e24-tP-UWi" firstAttribute="centerY" secondItem="3iB-ax-f4s" secondAttribute="centerY" id="i8y-sy-F6J"/>
+                            <constraint firstItem="e24-tP-UWi" firstAttribute="top" relation="greaterThanOrEqual" secondItem="9O0-vp-1hy" secondAttribute="top" constant="26" id="mZV-m5-N8k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9O0-vp-1hy"/>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="e24-tP-UWi" id="UTb-eh-vnU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efF-PN-Ph2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="293.60000000000002" y="-233.43328335832086"/>
+        </scene>
+    </scenes>
+</document>
