@@ -360,6 +360,11 @@
 					C6071E5F1F99F9F800E9013B = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					C6071E731F99F9F800E9013B = {
 						CreatedOnToolsVersion = 9.0;
