@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C6071E641F99F9F800E9013B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E631F99F9F800E9013B /* AppDelegate.swift */; };
-		C6071E691F99F9F800E9013B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6071E671F99F9F800E9013B /* Main.storyboard */; };
+		C6071E691F99F9F800E9013B /* Reciever.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6071E671F99F9F800E9013B /* Reciever.storyboard */; };
 		C6071E6B1F99F9F800E9013B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6071E6A1F99F9F800E9013B /* Assets.xcassets */; };
 		C6071E6E1F99F9F800E9013B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6071E6C1F99F9F800E9013B /* LaunchScreen.storyboard */; };
 		C6071E791F99F9F800E9013B /* RecieverViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6071E781F99F9F800E9013B /* RecieverViewTests.swift */; };
@@ -48,6 +48,9 @@
 		C6DA84DF1F9CE4960065FFF9 /* BeaconBroadcaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA84DE1F9CE4960065FFF9 /* BeaconBroadcaster.swift */; };
 		C6DA84E11F9CEA140065FFF9 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DA84E01F9CEA130065FFF9 /* CoreBluetooth.framework */; };
 		C6DA84E31F9CF60E0065FFF9 /* AppScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA84E21F9CF60E0065FFF9 /* AppScheme.swift */; };
+		C6DA84E61F9CF7710065FFF9 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA84E51F9CF7710065FFF9 /* ViewRouter.swift */; };
+		C6DA84ED1F9CF86F0065FFF9 /* Transmitter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6DA84EC1F9CF86F0065FFF9 /* Transmitter.storyboard */; };
+		C6DA84EE1F9CF8810065FFF9 /* TransmitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA84EB1F9CF8160065FFF9 /* TransmitterViewController.swift */; };
 		C6DE08721F9CE11600C4C23E /* RecieverBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE08711F9CE11600C4C23E /* RecieverBeacon.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +67,7 @@
 /* Begin PBXFileReference section */
 		C6071E601F99F9F800E9013B /* Receiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Receiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6071E631F99F9F800E9013B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C6071E681F99F9F800E9013B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C6071E681F99F9F800E9013B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Reciever.storyboard; sourceTree = "<group>"; };
 		C6071E6A1F99F9F800E9013B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6071E6D1F99F9F800E9013B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6071E6F1F99F9F800E9013B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,6 +104,10 @@
 		C6DA84DE1F9CE4960065FFF9 /* BeaconBroadcaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconBroadcaster.swift; sourceTree = "<group>"; };
 		C6DA84E01F9CEA130065FFF9 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		C6DA84E21F9CF60E0065FFF9 /* AppScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScheme.swift; sourceTree = "<group>"; };
+		C6DA84E41F9CF7610065FFF9 /* AppScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppScheme.swift; path = Receiver/AppScheme.swift; sourceTree = SOURCE_ROOT; };
+		C6DA84E51F9CF7710065FFF9 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		C6DA84EB1F9CF8160065FFF9 /* TransmitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransmitterViewController.swift; sourceTree = "<group>"; };
+		C6DA84EC1F9CF86F0065FFF9 /* Transmitter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transmitter.storyboard; sourceTree = "<group>"; };
 		C6DE08711F9CE11600C4C23E /* RecieverBeacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieverBeacon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,7 +160,7 @@
 				C68611B61F9B9AFD00BBAA07 /* Components */,
 				C68611B51F9B9AF600BBAA07 /* Protocols */,
 				C68611BA1F9B9B2200BBAA07 /* API */,
-				C6071E671F99F9F800E9013B /* Main.storyboard */,
+				C6071E671F99F9F800E9013B /* Reciever.storyboard */,
 				C6071E6C1F99F9F800E9013B /* LaunchScreen.storyboard */,
 				C6071E6A1F99F9F800E9013B /* Assets.xcassets */,
 				C6071E6F1F99F9F800E9013B /* Info.plist */,
@@ -195,9 +202,11 @@
 		C6071E971F9A073B00E9013B /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				C6DA84E51F9CF7710065FFF9 /* ViewRouter.swift */,
 				C688EDEF1F9A4D4D0065D95D /* Profile */,
 				C6071E961F9A073300E9013B /* Reciever */,
 				C68611A41F9B938A00BBAA07 /* DummyView */,
+				C6DA84EA1F9CF8160065FFF9 /* Transmitter */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -279,6 +288,7 @@
 				C688EDF41F9A51E90065D95D /* User.swift */,
 				C6DE08711F9CE11600C4C23E /* RecieverBeacon.swift */,
 				C6DA84DE1F9CE4960065FFF9 /* BeaconBroadcaster.swift */,
+				C6DA84E41F9CF7610065FFF9 /* AppScheme.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -320,6 +330,15 @@
 				C688EDF21F9A50750065D95D /* UserInfoCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		C6DA84EA1F9CF8160065FFF9 /* Transmitter */ = {
+			isa = PBXGroup;
+			children = (
+				C6DA84EC1F9CF86F0065FFF9 /* Transmitter.storyboard */,
+				C6DA84EB1F9CF8160065FFF9 /* TransmitterViewController.swift */,
+			);
+			path = Transmitter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,7 +433,8 @@
 				C6071E6E1F99F9F800E9013B /* LaunchScreen.storyboard in Resources */,
 				C6330D5B1F9A129C00C5C9EB /* Localizable.strings in Resources */,
 				C6071E6B1F99F9F800E9013B /* Assets.xcassets in Resources */,
-				C6071E691F99F9F800E9013B /* Main.storyboard in Resources */,
+				C6DA84ED1F9CF86F0065FFF9 /* Transmitter.storyboard in Resources */,
+				C6071E691F99F9F800E9013B /* Reciever.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,12 +456,14 @@
 				C6071EAC1F9A0DB300E9013B /* DoorError.swift in Sources */,
 				C68611AF1F9B981100BBAA07 /* ProfileViewInteractor.swift in Sources */,
 				C68611B91F9B9B1800BBAA07 /* ViewControllerInstantiable.swift in Sources */,
+				C6DA84E61F9CF7710065FFF9 /* ViewRouter.swift in Sources */,
 				C68611AA1F9B971600BBAA07 /* ProfileViewPresenter.swift in Sources */,
 				C688EDE91F9A3A760065D95D /* RecieverBeaconInteractor.swift in Sources */,
 				C688EDEC1F9A4C210065D95D /* RoundImageView.swift in Sources */,
 				C6071E881F99FCA100E9013B /* RecieverViewPresenter.swift in Sources */,
 				C6071E841F99FBF100E9013B /* APIRouter.swift in Sources */,
 				C688EDE71F9A39F00065D95D /* RecieverViewController.swift in Sources */,
+				C6DA84EE1F9CF8810065FFF9 /* TransmitterViewController.swift in Sources */,
 				C68611B41F9B9AAC00BBAA07 /* Presentable.swift in Sources */,
 				C68611B11F9B98EC00BBAA07 /* ProfileItem.swift in Sources */,
 				C6DE08721F9CE11600C4C23E /* RecieverBeacon.swift in Sources */,
@@ -488,12 +510,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C6071E671F99F9F800E9013B /* Main.storyboard */ = {
+		C6071E671F99F9F800E9013B /* Reciever.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C6071E681F99F9F800E9013B /* Base */,
 			);
-			name = Main.storyboard;
+			name = Reciever.storyboard;
 			sourceTree = "<group>";
 		};
 		C6071E6C1F99F9F800E9013B /* LaunchScreen.storyboard */ = {

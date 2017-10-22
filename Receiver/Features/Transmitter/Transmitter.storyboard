@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Transmitter View Controller-->
+        <scene sceneID="PjD-js-naZ">
+            <objects>
+                <viewController storyboardIdentifier="TransmitterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wAA-iC-sKf" customClass="TransmitterViewController" customModule="Receiver" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xT3-yo-Nwi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In Transmitter Mode..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XD3-Nh-t4S">
+                                <rect key="frame" x="93.5" y="321.5" width="189" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XD3-Nh-t4S" firstAttribute="centerY" secondItem="xT3-yo-Nwi" secondAttribute="centerY" id="JHG-Yc-EWh"/>
+                            <constraint firstItem="XD3-Nh-t4S" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="L1B-mj-DGE" secondAttribute="leading" constant="26" id="M6a-6n-FBb"/>
+                            <constraint firstItem="L1B-mj-DGE" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XD3-Nh-t4S" secondAttribute="trailing" constant="26" id="YP0-BC-jgS"/>
+                            <constraint firstItem="L1B-mj-DGE" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="XD3-Nh-t4S" secondAttribute="bottom" constant="26" id="hN1-sr-hdg"/>
+                            <constraint firstItem="XD3-Nh-t4S" firstAttribute="top" relation="greaterThanOrEqual" secondItem="L1B-mj-DGE" secondAttribute="top" constant="26" id="hbR-fL-Wkd"/>
+                            <constraint firstItem="XD3-Nh-t4S" firstAttribute="centerX" secondItem="xT3-yo-Nwi" secondAttribute="centerX" id="jzo-f1-LvC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="L1B-mj-DGE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z47-9y-vcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="414" y="-207"/>
+        </scene>
+    </scenes>
+</document>

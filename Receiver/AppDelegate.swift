@@ -12,11 +12,9 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var dummyBeaconBroadcaster: BeaconBroadcaster?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         setupAppForCurrentScheme()
-        
         return true
     }
 
@@ -43,16 +41,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setupAppForCurrentScheme() {
-        switch AppScheme.currentScheme() {
-        case .transmit:
-            setupDummyBeaconBroadcaster()
-        default:
-            break
-        }
-    }
-    
-    private func setupDummyBeaconBroadcaster() {
-        self.dummyBeaconBroadcaster = BeaconBroadcaster(withBeaconRegion: RecieverBeacon.defaultBeaconRegion)
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let currentScheme = AppScheme.currentScheme()
+        ViewRouter.setInitialRootViewControllerForScheme(scheme: currentScheme,
+                                                         onWindow: window)
     }
 
     internal func showSplashScreen(forSeconds seconds: TimeInterval) {
