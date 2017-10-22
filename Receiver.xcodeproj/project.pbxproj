@@ -47,6 +47,7 @@
 		C688EDF51F9A51E90065D95D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688EDF41F9A51E90065D95D /* User.swift */; };
 		C6DA84DF1F9CE4960065FFF9 /* BeaconBroadcaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA84DE1F9CE4960065FFF9 /* BeaconBroadcaster.swift */; };
 		C6DA84E11F9CEA140065FFF9 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DA84E01F9CEA130065FFF9 /* CoreBluetooth.framework */; };
+		C6DA84E31F9CF60E0065FFF9 /* AppScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA84E21F9CF60E0065FFF9 /* AppScheme.swift */; };
 		C6DE08721F9CE11600C4C23E /* RecieverBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE08711F9CE11600C4C23E /* RecieverBeacon.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 		C688EDF41F9A51E90065D95D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C6DA84DE1F9CE4960065FFF9 /* BeaconBroadcaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconBroadcaster.swift; sourceTree = "<group>"; };
 		C6DA84E01F9CEA130065FFF9 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		C6DA84E21F9CF60E0065FFF9 /* AppScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScheme.swift; sourceTree = "<group>"; };
 		C6DE08711F9CE11600C4C23E /* RecieverBeacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieverBeacon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				C6071E631F99F9F800E9013B /* AppDelegate.swift */,
+				C6DA84E21F9CF60E0065FFF9 /* AppScheme.swift */,
 				C6071E971F9A073B00E9013B /* Features */,
 				C68611B71F9B9B0500BBAA07 /* Models */,
 				C68611B61F9B9AFD00BBAA07 /* Components */,
@@ -452,6 +455,7 @@
 				C6071EA51F9A0A7800E9013B /* BeaconInteractorable.swift in Sources */,
 				C6DA84DF1F9CE4960065FFF9 /* BeaconBroadcaster.swift in Sources */,
 				C68611AC1F9B972700BBAA07 /* ProfileView.swift in Sources */,
+				C6DA84E31F9CF60E0065FFF9 /* AppScheme.swift in Sources */,
 				C6071E641F99F9F800E9013B /* AppDelegate.swift in Sources */,
 				C68611A31F9B938600BBAA07 /* DummyViewController.swift in Sources */,
 			);

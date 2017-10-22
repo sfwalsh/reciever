@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var dummyBeaconBroadcaster: BeaconBroadcaster?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        setupDummyBeaconBroadcaster()
+        setupAppForCurrentScheme()
+        
         return true
     }
 
@@ -39,6 +40,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    private func setupAppForCurrentScheme() {
+        switch AppScheme.currentScheme() {
+        case .transmit:
+            setupDummyBeaconBroadcaster()
+        default:
+            break
+        }
     }
     
     private func setupDummyBeaconBroadcaster() {
