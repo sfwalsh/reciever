@@ -18,9 +18,8 @@ class RecieverBeaconInteractor: NSObject, BeaconInteractorable {
     
     override init() {
         self.locationManager = CLLocationManager()
-        // MARK: FIXME - UUID
-        self.beaconRegion = CLBeaconRegion(proximityUUID: UUID(),
-                                           identifier: "Reciever-Test")
+        self.beaconRegion = RecieverBeacon.defaultBeaconRegion
+        
         self.lastRangedBeacons = []
         
         super.init()

@@ -12,8 +12,10 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var dummyBeaconBroadcaster: BeaconBroadcaster?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        setupDummyBeaconBroadcaster()
         return true
     }
 
@@ -39,6 +41,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+    private func setupDummyBeaconBroadcaster() {
+        self.dummyBeaconBroadcaster = BeaconBroadcaster(withBeaconRegion: RecieverBeacon.defaultBeaconRegion)
+    }
+
     internal func showSplashScreen(forSeconds seconds: TimeInterval) {
         let splashScreen = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateInitialViewController()
         let previousRootView = window?.rootViewController

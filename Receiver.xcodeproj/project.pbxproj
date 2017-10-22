@@ -45,6 +45,9 @@
 		C688EDF11F9A50340065D95D /* SubMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688EDF01F9A50340065D95D /* SubMenuCell.swift */; };
 		C688EDF31F9A50750065D95D /* UserInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688EDF21F9A50750065D95D /* UserInfoCell.swift */; };
 		C688EDF51F9A51E90065D95D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688EDF41F9A51E90065D95D /* User.swift */; };
+		C6DA84DF1F9CE4960065FFF9 /* BeaconBroadcaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA84DE1F9CE4960065FFF9 /* BeaconBroadcaster.swift */; };
+		C6DA84E11F9CEA140065FFF9 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DA84E01F9CEA130065FFF9 /* CoreBluetooth.framework */; };
+		C6DE08721F9CE11600C4C23E /* RecieverBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE08711F9CE11600C4C23E /* RecieverBeacon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +97,9 @@
 		C688EDF01F9A50340065D95D /* SubMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubMenuCell.swift; sourceTree = "<group>"; };
 		C688EDF21F9A50750065D95D /* UserInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoCell.swift; sourceTree = "<group>"; };
 		C688EDF41F9A51E90065D95D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C6DA84DE1F9CE4960065FFF9 /* BeaconBroadcaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconBroadcaster.swift; sourceTree = "<group>"; };
+		C6DA84E01F9CEA130065FFF9 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		C6DE08711F9CE11600C4C23E /* RecieverBeacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieverBeacon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6DA84E11F9CEA140065FFF9 /* CoreBluetooth.framework in Frameworks */,
 				C68611BD1F9B9DCD00BBAA07 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +274,8 @@
 			children = (
 				C6071EAB1F9A0DB300E9013B /* DoorError.swift */,
 				C688EDF41F9A51E90065D95D /* User.swift */,
+				C6DE08711F9CE11600C4C23E /* RecieverBeacon.swift */,
+				C6DA84DE1F9CE4960065FFF9 /* BeaconBroadcaster.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -282,6 +291,7 @@
 		C68611BB1F9B9DCD00BBAA07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C6DA84E01F9CEA130065FFF9 /* CoreBluetooth.framework */,
 				C68611BC1F9B9DCD00BBAA07 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
@@ -431,6 +441,7 @@
 				C688EDE71F9A39F00065D95D /* RecieverViewController.swift in Sources */,
 				C68611B41F9B9AAC00BBAA07 /* Presentable.swift in Sources */,
 				C68611B11F9B98EC00BBAA07 /* ProfileItem.swift in Sources */,
+				C6DE08721F9CE11600C4C23E /* RecieverBeacon.swift in Sources */,
 				C688EDEE1F9A4D470065D95D /* ProfileViewController.swift in Sources */,
 				C688EDF11F9A50340065D95D /* SubMenuCell.swift in Sources */,
 				C688EDF51F9A51E90065D95D /* User.swift in Sources */,
@@ -439,6 +450,7 @@
 				C6071E8A1F99FCEB00E9013B /* RecieverView.swift in Sources */,
 				C6071E861F99FC6000E9013B /* RecieverViewInteractor.swift in Sources */,
 				C6071EA51F9A0A7800E9013B /* BeaconInteractorable.swift in Sources */,
+				C6DA84DF1F9CE4960065FFF9 /* BeaconBroadcaster.swift in Sources */,
 				C68611AC1F9B972700BBAA07 /* ProfileView.swift in Sources */,
 				C6071E641F99F9F800E9013B /* AppDelegate.swift in Sources */,
 				C68611A31F9B938600BBAA07 /* DummyViewController.swift in Sources */,
