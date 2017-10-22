@@ -11,8 +11,10 @@ import UIKit
 class SubMenuCell: UITableViewCell {
     
     func setup(title: String,
-               image: UIImage?) {
+               image: UIImage?,
+               textColour: UIColor) {
         textLabel?.text = title
         imageView?.image = image
+        textLabel?.textColor = textColour
     }
 }

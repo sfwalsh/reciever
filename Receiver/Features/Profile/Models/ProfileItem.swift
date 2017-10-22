@@ -10,5 +10,5 @@ import UIKit
 
 enum ProfileItem {
     case userInfo
-    case subMenu(title: String, image: UIImage?)
+    case subMenu(title: String, image: UIImage?, textColour: UIColor)
 }

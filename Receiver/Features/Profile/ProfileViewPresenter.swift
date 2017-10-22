@@ -50,7 +50,7 @@ extension ProfileViewPresenter: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = items[indexPath.section][indexPath.row]
         switch item {
-        case .subMenu(let title, _):
+        case .subMenu(let title, _, _):
             view.openDummyView(withTitle: title)
             tableView.deselectRow(at: indexPath, animated: true)
         default:
@@ -91,10 +91,11 @@ extension ProfileViewPresenter: UITableViewDelegate, UITableViewDataSource {
             cell.setup(withName: User.current.name,
                        image: User.current.image)
             return cell
-        case .subMenu(let title, let image):
+        case .subMenu(let title, let image, let textColour):
             let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.subMenu, for: indexPath) as! SubMenuCell
             cell.setup(title: title,
-                       image: image)
+                       image: image,
+                       textColour: textColour)
             return cell
         }
     }
