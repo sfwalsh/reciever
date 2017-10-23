@@ -21,6 +21,6 @@ class TransmitterViewController: UIViewController, ViewControllerInstantiable {
     }
     
     private func setupDummyBeaconBroadcaster() {
-        self.dummyBeaconBroadcaster = BeaconBroadcaster(withBeaconRegion: RecieverBeacon.defaultBeaconRegion)
+        self.dummyBeaconBroadcaster = BeaconBroadcaster(withBeaconRegion: RecieverBeacon.fetchDefaultBeaconRegion())
     }
 }

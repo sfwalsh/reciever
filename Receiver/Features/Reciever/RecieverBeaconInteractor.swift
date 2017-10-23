@@ -18,7 +18,7 @@ class RecieverBeaconInteractor: NSObject, BeaconInteractorable {
     
     override init() {
         self.locationManager = CLLocationManager()
-        self.beaconRegion = RecieverBeacon.defaultBeaconRegion
+        self.beaconRegion = RecieverBeacon.fetchDefaultBeaconRegion()
         
         self.lastRangedBeacons = []
         
@@ -29,12 +29,7 @@ class RecieverBeaconInteractor: NSObject, BeaconInteractorable {
     }
     
     private func assertCorrectAuthorizationStatus() {
-        switch CLLocationManager.authorizationStatus() {
-        case .notDetermined:
-            locationManager.requestWhenInUseAuthorization()
-        default:
-            break
-        }
+        locationManager.requestAlwaysAuthorization()
     }
     
     func startMonitoringBeacons() {
@@ -88,13 +83,22 @@ extension RecieverBeaconInteractor {
 // MARK: CLLocationManagerDelegate Implementation
 extension RecieverBeaconInteractor: CLLocationManagerDelegate {
     
-    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        if let beaconRegion = region as? CLBeaconRegion {
-            
-            if CLLocationManager.isRangingAvailable() {
-                startRangingBeacons(inRegion: beaconRegion)
-            }
+    func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
+        locationManager.requestState(for: beaconRegion)
+    }
+    
+    func locationManager(_ manager: CLLocationManager,
+                         didDetermineState state: CLRegionState,
+                         for region: CLRegion) {
+        switch state {
+        case .inside:
+            attemptStartRangingBeacons(region)
+        default: break
         }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        attemptStartRangingBeacons(region)
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
@@ -107,5 +111,15 @@ extension RecieverBeaconInteractor: CLLocationManagerDelegate {
                          didRangeBeacons beacons: [CLBeacon],
                          in region: CLBeaconRegion) {
         lastRangedBeacons = beacons
+    }
+    
+    
+    private func attemptStartRangingBeacons(_ region: CLRegion) {
+        if let beaconRegion = region as? CLBeaconRegion {
+            
+            if CLLocationManager.isRangingAvailable() {
+                startRangingBeacons(inRegion: beaconRegion)
+            }
+        }
     }
 }

@@ -9,33 +9,29 @@
 import CoreLocation
 import CoreBluetooth
 
-class BeaconBroadcaster: NSObject, CBCentralManagerDelegate, CBPeripheralManagerDelegate {
+class BeaconBroadcaster: NSObject, CBPeripheralManagerDelegate {
     
     private let beaconRegion: CLBeaconRegion
-    
     private var peripheralManager: CBPeripheralManager?
-    private var centralManager: CBCentralManager?
     
     init(withBeaconRegion beaconRegion: CLBeaconRegion) {
         self.beaconRegion = beaconRegion
         
         super.init()
+        
         self.peripheralManager = CBPeripheralManager(delegate: self,
                                                      queue: nil)
-        self.centralManager = CBCentralManager(delegate: self,
-                                               queue: nil)
     }
     
-    func centralManagerDidUpdateState(_ central: CBCentralManager) {
-        
-        switch central.state {
+    func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
+        switch peripheral.state {
         case .poweredOn:
-           startBroadcasting(withBeaconRegion: beaconRegion)
+            startBroadcasting(withBeaconRegion: beaconRegion)
         case .poweredOff, .resetting, .unauthorized, .unknown, .unsupported:
             break
         }
     }
-    
+
     func startBroadcasting(withBeaconRegion beaconRegion: CLBeaconRegion) {
 
         let peripheralData = beaconRegion.peripheralData(withMeasuredPower: nil)
@@ -45,8 +41,8 @@ class BeaconBroadcaster: NSObject, CBCentralManagerDelegate, CBPeripheralManager
         }
     }
     
-    internal func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
-        print("updated state to \(peripheral.state)")
+    func peripheralManagerDidStartAdvertising(_ peripheral: CBPeripheralManager, error: Error?) {
+        
     }
     
     private func dictionaryForPeripheralData(peripheralData: NSMutableDictionary) -> [String: Any]? {
