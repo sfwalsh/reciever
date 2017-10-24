@@ -47,11 +47,11 @@
 		C688EDF51F9A51E90065D95D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C688EDF41F9A51E90065D95D /* User.swift */; };
 		C6DA84DF1F9CE4960065FFF9 /* BeaconBroadcaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA84DE1F9CE4960065FFF9 /* BeaconBroadcaster.swift */; };
 		C6DA84E11F9CEA140065FFF9 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DA84E01F9CEA130065FFF9 /* CoreBluetooth.framework */; };
-		C6DA84E31F9CF60E0065FFF9 /* AppScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA84E21F9CF60E0065FFF9 /* AppScheme.swift */; };
 		C6DA84E61F9CF7710065FFF9 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA84E51F9CF7710065FFF9 /* ViewRouter.swift */; };
 		C6DA84ED1F9CF86F0065FFF9 /* Transmitter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6DA84EC1F9CF86F0065FFF9 /* Transmitter.storyboard */; };
 		C6DA84EE1F9CF8810065FFF9 /* TransmitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DA84EB1F9CF8160065FFF9 /* TransmitterViewController.swift */; };
 		C6DE08721F9CE11600C4C23E /* RecieverBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DE08711F9CE11600C4C23E /* RecieverBeacon.swift */; };
+		C6FEBE3E1F9F8504000994E9 /* AppScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FEBE3D1F9F84ED000994E9 /* AppScheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,12 +103,12 @@
 		C688EDF41F9A51E90065D95D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C6DA84DE1F9CE4960065FFF9 /* BeaconBroadcaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconBroadcaster.swift; sourceTree = "<group>"; };
 		C6DA84E01F9CEA130065FFF9 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		C6DA84E21F9CF60E0065FFF9 /* AppScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScheme.swift; sourceTree = "<group>"; };
 		C6DA84E41F9CF7610065FFF9 /* AppScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppScheme.swift; path = Receiver/AppScheme.swift; sourceTree = SOURCE_ROOT; };
 		C6DA84E51F9CF7710065FFF9 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		C6DA84EB1F9CF8160065FFF9 /* TransmitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransmitterViewController.swift; sourceTree = "<group>"; };
 		C6DA84EC1F9CF86F0065FFF9 /* Transmitter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transmitter.storyboard; sourceTree = "<group>"; };
 		C6DE08711F9CE11600C4C23E /* RecieverBeacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecieverBeacon.swift; sourceTree = "<group>"; };
+		C6FEBE3D1F9F84ED000994E9 /* AppScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppScheme.swift; path = Receiver/AppScheme.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,16 +154,15 @@
 			isa = PBXGroup;
 			children = (
 				C6071E631F99F9F800E9013B /* AppDelegate.swift */,
-				C6DA84E21F9CF60E0065FFF9 /* AppScheme.swift */,
 				C6071E971F9A073B00E9013B /* Features */,
 				C68611B71F9B9B0500BBAA07 /* Models */,
 				C68611B61F9B9AFD00BBAA07 /* Components */,
 				C68611B51F9B9AF600BBAA07 /* Protocols */,
 				C68611BA1F9B9B2200BBAA07 /* API */,
 				C6071E671F99F9F800E9013B /* Reciever.storyboard */,
-				C6071E6C1F99F9F800E9013B /* LaunchScreen.storyboard */,
 				C6071E6A1F99F9F800E9013B /* Assets.xcassets */,
 				C6071E6F1F99F9F800E9013B /* Info.plist */,
+				C6071E6C1F99F9F800E9013B /* LaunchScreen.storyboard */,
 				C6330D5A1F9A129C00C5C9EB /* Localizable.strings */,
 			);
 			path = Receiver;
@@ -284,6 +283,7 @@
 		C68611B71F9B9B0500BBAA07 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C6FEBE3D1F9F84ED000994E9 /* AppScheme.swift */,
 				C6071EAB1F9A0DB300E9013B /* DoorError.swift */,
 				C688EDF41F9A51E90065D95D /* User.swift */,
 				C6DE08711F9CE11600C4C23E /* RecieverBeacon.swift */,
@@ -477,9 +477,9 @@
 				C6071EA51F9A0A7800E9013B /* BeaconInteractorable.swift in Sources */,
 				C6DA84DF1F9CE4960065FFF9 /* BeaconBroadcaster.swift in Sources */,
 				C68611AC1F9B972700BBAA07 /* ProfileView.swift in Sources */,
-				C6DA84E31F9CF60E0065FFF9 /* AppScheme.swift in Sources */,
 				C6071E641F99F9F800E9013B /* AppDelegate.swift in Sources */,
 				C68611A31F9B938600BBAA07 /* DummyViewController.swift in Sources */,
+				C6FEBE3E1F9F8504000994E9 /* AppScheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
