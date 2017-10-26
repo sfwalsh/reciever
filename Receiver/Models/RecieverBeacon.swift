@@ -12,7 +12,7 @@ struct RecieverBeacon {
     private static let uuid = UUID(uuidString: "447323A8-2F54-46C8-B2FD-25DA7D847725")!
     private static let id = "com.greenby.Reciever.test"
     private static let majorIdentifier: CLBeaconMajorValue = 100
-    private static let minorIdentifier: CLBeaconMinorValue = 1
+    private static let minorIdentifier: CLBeaconMinorValue = 5873
     
     static func fetchDefaultBeaconRegion() -> CLBeaconRegion {
         let beaconRegion = CLBeaconRegion(proximityUUID: uuid,

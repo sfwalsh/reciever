@@ -10,8 +10,6 @@ import CoreLocation
 
 class RecieverBeaconInteractor: NSObject, BeaconInteractorable {
     
-    private let dummyId: Int = 5124
-    
     let locationManager: CLLocationManager
     let beaconRegion: CLBeaconRegion
     var lastRangedBeacons: [CLBeacon]
@@ -61,8 +59,7 @@ class RecieverBeaconInteractor: NSObject, BeaconInteractorable {
     }
     
     private func calculateDoorId(forBeacon beacon: CLBeacon) -> Int {
-        // Calculate based on Major/Minor identifier
-        return dummyId
+        return beacon.minor.intValue
     }
 }
 
